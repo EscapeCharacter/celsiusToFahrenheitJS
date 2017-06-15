@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>celsiusToFahrenheit</title>
+</head>
+
+<body>
+
+<form>
+  Input Celsius value that you want to convert to Fahrenheit below:<br>
+  <input type="text" class="celsiusValue">
+  <br>
+  <input type="submit" value="Convert to Fahrenheit" class="submit">
+</form>
+
+<div>
+	The result is: <span class="display"></span>
+</div>
+
+<script type="text/javascript">
+
+var input = document.querySelector('.celsiusValue');
+var submit = document.querySelector('.submit');
+var display = document.querySelector('.display');
+
+submit.addEventListener('click', celsiusToFahrenheit);
+
+function celsiusToFahrenheit(e) {
+  e.preventDefault();
+  var one = parseFloat(input.value);
+  var result = (one * 1.8) + 32;
+  display.innerText = result;
+}
+
+</script>
+
+</body>
+
+</html> 
